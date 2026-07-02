@@ -1,0 +1,35 @@
+version: 1.0
+
+builds:
+  - name: "Psoriatlas App Store Build"
+    workspace: "PsoriAtlas/PsoriAtlas.xcodeproj"
+    scheme: "PsoriAtlas"
+    environment:
+      xcode: "15.3"
+      macos: "14.5"
+      variables:
+        - name: "BUILD_CONFIG"
+          value: "Release"
+    actions:
+      - action: build
+        destination: generic/platform=iOS
+        configuration: Release
+      - action: test
+        destination: generic/platform=iOS\ Simulator,name=iPhone\ 15
+        testPlan: "PsoriAtlasTests"
+        continueOnFailure: false
+      - action: archive
+        configuration: Release
+      - action: distribute
+        method: app-store
+        signingStyle: automatic
+        submitForReview: false
+    triggers:
+      - type: branch
+        branches:
+          - "main"
+          - "release/*"
+    post-actions:
+      - action: notify
+        type: email
+
