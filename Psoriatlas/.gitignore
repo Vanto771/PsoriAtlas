@@ -1,0 +1,8 @@
+# Ignore nested repository metadata and stale worktrees
+PsoriasisDrugDatabase/git/
+PsoriasisDrugDatabase.worktrees/
+
+# Ignore Xcode and user settings
+xcuserdata/
+*.xcuserstate
+*.xcworkspace

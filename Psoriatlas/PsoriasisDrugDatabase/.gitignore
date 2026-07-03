@@ -1,0 +1,64 @@
+# Swift & Xcode
+*.pbxproj.bak
+*.xcarchive
+*.xcframework
+*.xcstoredata
+*.xcstoredata/*
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+build/
+DerivedData/
+*.swiftpm/xcode/package.xcworkspace/xcuserdata/
+
+# Build artifacts
+.build/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Swift Package Manager
+.swiftpm/
+
+# CocoaPods
+Pods/
+*.podlock
+
+# Xcode
+*.ipa
+*.app
+*.dSYM.zip
+*.dSYM/
+
+# IDE
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment & Credentials
+.env
+.env.local
+*.pem
+*.key
+*.p12
+
+# Temporary files
+*.tmp
+temp/
+*.log
+
+# SQLite databases (keep the template, ignore local instances)
+*.db
+!psoriasis_drugs_template.db
+
+# macOS
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db

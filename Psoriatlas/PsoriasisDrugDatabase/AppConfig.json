@@ -1,0 +1,24 @@
+{
+  "AppName": "PsoriAtlas",
+  "Version": "1.0.0",
+  "BundleIdentifier": "com.psoriatlas.drugdatabase",
+  "MinimumIOSVersion": "14.0",
+  "SupportedInterfaceOrientations": [
+    "UIInterfaceOrientationPortrait",
+    "UIInterfaceOrientationPortraitUpsideDown"
+  ],
+  "AppDescription": "FDA-Approved Psoriasis Treatment Reference Guide",
+  "AppCategory": "Medical",
+  "PrivacyDescription": "This app does not collect or share any personal data. All drug information is stored locally on your device.",
+  "RequiredDeviceCapabilities": [
+    "armv7"
+  ],
+  "Permissions": {
+    "NSLocalNetworkUsageDescription": "Not used",
+    "NSBonjourServiceTypes": []
+  },
+  "DisplayName": "PsoriAtlas",
+  "Identifier": "com.psoriatlas.drugdatabase",
+  "DevelopmentTeam": "YOUR_TEAM_ID",
+  "CodeSigningIdentity": "Apple Development"
+}
