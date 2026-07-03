@@ -2,7 +2,7 @@ version: 1.0
 
 builds:
   - name: "Psoriatlas App Store Build"
-    workspace: "PsoriAtlas/PsoriAtlas.xcodeproj"
+    project: "PsoriAtlas.xcodeproj"
     scheme: "PsoriAtlas"
     environment:
       xcode: "15.3"
