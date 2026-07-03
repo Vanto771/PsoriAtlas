@@ -314,7 +314,7 @@ class DatabaseManager: ObservableObject {
     private func bindBlob(_ statement: OpaquePointer?, index: Int32, data: Data?) {
         guard let statement = statement else { return }
         if let data = data {
-            data.withUnsafeBytes { bytes in
+            _ = data.withUnsafeBytes { bytes in
                 sqlite3_bind_blob(statement, index, bytes.baseAddress, Int32(data.count), sqliteTransient)
             }
         } else {

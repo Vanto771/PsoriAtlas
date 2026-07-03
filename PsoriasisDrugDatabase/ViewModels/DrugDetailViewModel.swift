@@ -35,13 +35,13 @@ private enum DrugLinkResolver {
     }
 
     private static func fdaLink(for drug: Drug) -> URL? {
-        let subject = drug.name ?? drug.genericName ?? ""
+        let subject = drug.name
         let encodedQuery = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? subject
         return URL(string: "https://www.fda.gov/search?s=\(encodedQuery)&sort_bef_combine=rel_DESC")
     }
 
     private static func psoriasisLink(for drug: Drug) -> URL? {
-        let subject = drug.name ?? drug.genericName ?? ""
+        let subject = drug.name
         let encodedQuery = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? subject
         return URL(string: "https://www.psoriasis.org/search-results/?q=\(encodedQuery)")
     }
